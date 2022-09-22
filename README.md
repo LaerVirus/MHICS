@@ -1,3 +1,3 @@
 # Верас Алексей Викторович ПИР-201
 
-[*CV*](cv.md)
+https://laervirus.github.io/MHICS_PIR-201_Veras/cv.html
