@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="CSS/index.css">
+    <title>Резюме</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="nav-menu">
+                <nav>
+                    <ul>
+                        <li><a href="#info">Контакты</a></li>
+                        <li><a href="#skills">Навыки</a></li>
+                        <li><a href="#work">Опыт работы</a></li>
+                        <li><a href="#english">Уровень английского</a></li>
+                        <li><a href="#code">Пример кода</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <hr>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <div class="main-info">
+                <img src="Images/photo.png" alt="photo">
+                <h1>Верас Алексей</h1>
+                <p>Я студент третьего курса Белорусско-Российского университета по специальности "Программная инженерия".</p>
+            </div>
+            <hr>
+        </div>
+        <div class="container">
+            <div id="info">
+                <h2>Контактная информация</h2>
+                <ul>
+                    <li>Номер телефона: +375336252465</li>
+                    <li>Email: aliaksei.veras@gmail.com</li>
+                </ul>
+            </div>
+            <hr>
+        </div>
+        <div class="container">
+            <div id="skills">
+                <h2>Навыки</h2>
+                <ul>
+                    <li>C# (.Net, .Net Core)</li>
+                    <li>Entity Framework Core</li>
+                    <li>Blazor</li>
+                </ul>
+            </div>
+            <hr>
+        </div>
+        <div class="container">
+            <div id="work">
+                <h2>Опыт работы</h2>
+                <a href="https://github.com/LaerVirus"><b>Мой GitHub</b></a>
+            </div>
+            <hr>
+        </div>
+        <div class="container">
+            <div id="english">
+                <h2>Уровень английского</h2>
+                <i>A1</i>
+            </div>
+            <hr>
+        </div>
+        <div class="container">
+            <div id="code">
+                <h2>Пример кода</h2>
+                <pre>
+                    <code>
+using System;
+using System.Collections.Generic;
+using System.Text;
+                        
+namespace PIR_201_Veras_Lab_5
+{
+    public class Manager : Worker
+    {
+        private const int h = 100;
+                        
+        private double sales;
+                        
+        public double Sales
+        {
+            get
+            {
+                return sales;
+            }
+            set
+            {
+                sales = value < 0 ? 0 : value;
+            }
+        }
+                        
+        public Manager(string name, double minimumSalary, double k, int sales) : base(name, minimumSalary, k)
+        {
+            this.sales = sales;
+        }
+                        
+        public override double FinalSalary()
+        {
+        if (sales > h)
+        {
+            return base.FinalSalary() * h * 0.01;
+        }
+        else
+        {
+            return MinimumSalary;
+        }
+                        
+        public override void PrintInfo()
+        {
+            Console.WriteLine($"Имя сотрудника: {Name}\nДолжность: Менеджер\nМинимальная зарплата: {MinimumSalary}\nОбъём продаж: {Sales}");
+        }
+    }
+}                     
+                    </code>
+                </pre>
+            </div>
+            <hr>
+        </div>
+    </main>
+    <footer>
+        <div class="container">
+            <p><a href="https://github.com/LaerVirus">https://github.com/LaerVirus</a><br>2022</p>
+        </div>
+    </footer>
+</body>
+</html>
